@@ -30,10 +30,10 @@ From PowerShell:
 ```
 	
 	
-## Special characters
+## Escape characters
 
 \`t -- inserts a tab character
-
+\`r`n -- inserts a newline
 
 ## Working with files
 
@@ -42,3 +42,63 @@ From PowerShell:
     $fileList[0].PSIsContainer  # True if directory
     Set-Location -Path $fileList[0].FullName # does a cd to the directory
 ```
+
+Iterate through files in a directory:
+
+```powershell
+$path = "C:\path_to_directory"
+
+Get-ChildItem $path | ForEach-Object {
+    Write-Output "$($_.Name)" 
+}
+```
+
+Copy file to a different folder:
+```powershell
+# $_ is the "current" loop variable
+Copy-Item -Path $_.FullName -Destination ($path + "\English")
+```powershell
+
+
+## Using .NET types
+
+```powershell
+	Add-Type -Path .\UidHelper.dll
+	# adds the .NET type, so we can use it from PowerShell code
+```	
+
+
+## Pipeline, foreach
+
+```powershell
+	$_ # is the current value in the pipeline
+```
+Example:
+```powershell
+		1,2,3 | %{ Write-Output $_ } 
+```
+	
+$_ is also used to access the current error object in an exception, e.g.
+```powershell
+	Catch 
+	{
+		ErrorMessage = $_.Exception.Message
+	}
+```
+	
+In general:
+
+| %{}  --> is piping each object in a list into some kind of function 
+	
+	
+## Start a process
+Start-Process "FilePath"
+
+
+## Running commands on a remote machine
+
+Invoke-Command - has options to run on a remote machine
+
+-ComputerName <name1> -ScriptBlock {...}
+
+-ComputerName <name1> -FilePath <filepath to ps1 script>
