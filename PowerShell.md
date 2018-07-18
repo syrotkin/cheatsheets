@@ -1,12 +1,11 @@
 ## Setting environment variables from the command line
-to set the variable  in the CMD shell, do the following:
+To set the variable in the CMD shell, do the following:
 
     set OSY=Syrotkin    // this will change the variable in the current window
 
     setx OSY "Syrotkin" /m    // this will change the variable in other windows
 
 From PowerShell:
-
 ```powershell
 [Environment]::SetEnvironmentVariable("OSY", "Machine1", "Machine")
 # sets the environment variable to "Machine1" in the "Advanced system settings" (where I would normally set Environment variables)
@@ -33,6 +32,7 @@ if ($line -match $pattern) {
 ## Escape characters
 
 \`t -- inserts a tab character
+
 \`r`n -- inserts a newline
 
 ## Working with files
@@ -61,7 +61,6 @@ Copy-Item -Path $_.FullName -Destination ($path + "\English")
 
 
 ## Using .NET types
-
 ```powershell
 Add-Type -Path .\UidHelper.dll
 # adds the .NET type, so we can use it from PowerShell code
@@ -69,16 +68,14 @@ Add-Type -Path .\UidHelper.dll
 
 
 ## Pipeline, foreach
+`$_` is the current value in the pipeline
 
-```powershell
-$_ # is the current value in the pipeline
-```
 Example:
 ```powershell
 1,2,3 | %{ Write-Output $_ } 
 ```
 	
-$_ is also used to access the current error object in an exception, e.g.
+`$_` is also used to access the current error object in an exception, e.g.
 ```powershell
 Catch 
 {
