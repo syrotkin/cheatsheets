@@ -1,5 +1,3 @@
-# Git
-
 ## reflog
 `reflog` shows a log of changes to the local repository `HEAD`
 
@@ -41,6 +39,12 @@ Stash only a certain file:
 
 `git stash -m "message" <path>`
 
+## View stash
+View the files in the stash:
+`git stash show 0` 
+
+View the diff:
+`git stash show -p 0`
 
 ## --force-with-lease
 Do not do 
