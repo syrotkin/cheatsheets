@@ -85,5 +85,15 @@ https://stackoverflow.com/questions/1030169/easy-way-to-pull-latest-of-all-git-s
 `git show -r --name-only HEAD`
 
 
+## Undo changes to a a non-staged file:
+`git checkout <file>`
+
+## Merging and rebasing
+We are in a feature branch:
+
+`git rebase develop` -- rebases current onto `develop`. The current branch will be aware of all the changes in `develop`.
+
+`git merge develop` -- merges `develop` into the current branch. The current branch will be aware of all the changes in `develop`.
+
 
 
