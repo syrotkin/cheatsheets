@@ -7,6 +7,13 @@ To set the variable in the CMD shell, do the following:
 
 From PowerShell:
 ```powershell
+Set-Item -Path env:DB2CLP -value "**$$**"
+# this works and does not do the funny $$ conversion
+```
+
+Otherwise, try this, using .NET libraries:
+
+```powershell
 [Environment]::SetEnvironmentVariable("OSY", "Machine1", "Machine")
 # sets the environment variable to "Machine1" in the "Advanced system settings" (where I would normally set Environment variables)
 	
