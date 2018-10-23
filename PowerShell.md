@@ -94,7 +94,13 @@ In general:
 
 `| %{}`  --> is piping each object in a list into some kind of function 
 	
-	
+A C#-like foreach exists in PowerShell, too:
+```powershell
+foreach ($item in $array) {
+	# Do something
+}
+```
+
 ## Start a process
 Start-Process "FilePath"
 
@@ -106,3 +112,13 @@ Start-Process "FilePath"
 `-ComputerName <name1> -ScriptBlock {...}`
 
 `-ComputerName <name1> -FilePath <filepath to ps1 script>`
+
+## Arrays
+### Create and populate
+```powershell
+$array = @()
+$array += 1
+$array += 2
+# OR:
+$array = 1, 2, 3
+```
