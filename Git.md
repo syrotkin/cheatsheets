@@ -95,5 +95,7 @@ We are in a feature branch:
 
 `git merge develop` -- merges `develop` into the current branch. The current branch will be aware of all the changes in `develop`.
 
+## gitk
 
+`gitk <file path>` -- see history for one file
 
