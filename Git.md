@@ -99,3 +99,8 @@ We are in a feature branch:
 
 `gitk <file path>` -- see history for one file
 
+## Git revert commit
+
+`git revert <commit> -m 1`
+
+https://stackoverflow.com/questions/5970889/why-does-git-revert-complain-about-a-missing-m-option
