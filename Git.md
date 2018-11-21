@@ -55,7 +55,7 @@ DO:
 
 `git push --force-with-lease`
 
-*TODO*: link to the article where I learned this
+https://developer.atlassian.com/blog/2015/04/force-with-lease/
 
 ## log all
 `git log --all`
