@@ -37,7 +37,7 @@ and it will realize that it is a rename. Git will see the delete plus the add wi
 ## Stash only certain files
 Stash only a certain file:
 
-`git stash -m "message" <path>`
+`git stash push -m "message" <path>`
 
 ## View stash
 View the files in the stash:
