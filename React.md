@@ -101,7 +101,9 @@ https://reactjs.org/docs/typechecking-with-proptypes.html
 MyComponent.propTypes = {age: PropTypes.number.isRequired, name: PropTypes.string.isRequired };
 ```
 
-## Using state in a component
+## State
+
+### Using state in a component
 `state` has to be set in the constructor and it has to be an object.
 ```javascript
 class MyComponent extends React.Component {
@@ -113,4 +115,10 @@ class MyComponent extends React.Component {
         return (<h1>{this.state.name}</h1>);
     }
 }
+```
+
+### Setting state
+
+```javascript
+this.setState({name: 'Bob'});
 ```
