@@ -45,6 +45,10 @@ if ($line -match $pattern) {
 ## Working with files
 
 ```powershell
+$file = Get-Content 'path_to_file'
+foreach ($line in $file) {
+	# do something
+}
 $fileList = Get-ChildItem . # does ls, then each object is really a file, you can query its properties.
 $fileList[0].PSIsContainer  # True if directory
 Set-Location -Path $fileList[0].FullName # does a cd to the directory
