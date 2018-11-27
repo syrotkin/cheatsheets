@@ -105,6 +105,11 @@ foreach ($item in $array) {
 }
 ```
 
+## Sorting
+```powershell
+$set = $set | Sort-Object
+```
+
 ## Start a process
 Start-Process "FilePath"
 
