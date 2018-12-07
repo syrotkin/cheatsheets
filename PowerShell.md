@@ -1,3 +1,8 @@
+## Determine installed PowerShell version
+```
+$PSVersionTable.PSVersion
+```
+
 ## Setting environment variables from the command line
 To set the variable in the CMD shell, do the following:
 
