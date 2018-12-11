@@ -1,6 +1,12 @@
 ## Determine installed PowerShell version
-```
+```powershell
 $PSVersionTable.PSVersion
+```
+
+## Run a Windows executable
+
+```powershell
+& .\myProgram.exe
 ```
 
 ## Setting environment variables from the command line
@@ -49,17 +55,24 @@ if ($line -match $pattern) {
 
 ## Working with files
 
+### Get content
+
 ```powershell
 $file = Get-Content 'path_to_file'
 foreach ($line in $file) {
 	# do something
 }
+```
+
+### Working with file objects
+
+```
 $fileList = Get-ChildItem . # does ls, then each object is really a file, you can query its properties.
 $fileList[0].PSIsContainer  # True if directory
 Set-Location -Path $fileList[0].FullName # does a cd to the directory
 ```
 
-Iterate through files in a directory:
+### Iterate through files in a directory:
 
 ```powershell
 $path = "C:\path_to_directory"
@@ -69,7 +82,7 @@ Get-ChildItem $path | ForEach-Object {
 }
 ```
 
-Copy file to a different folder:
+### Copy file to a different folder:
 ```powershell
 # $_ is the "current" loop variable
 Copy-Item -Path $_.FullName -Destination ($path + "\English")
