@@ -64,6 +64,12 @@ foreach ($line in $file) {
 }
 ```
 
+### Tail
+
+```powershell
+Get-Content myFile.txt -Tail 10
+```
+
 ### Working with file objects
 
 ```
