@@ -124,3 +124,5 @@ React expects you to never modify state directly, instead use `this.setState()` 
 ```javascript
 this.setState({name: 'Bob'});
 ```
+
+###TODO: describe this.functionName.bind(this); to be done in the constructor to tell the component class methods about "this"
