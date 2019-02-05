@@ -119,6 +119,8 @@ class MyComponent extends React.Component {
 
 ### Setting state
 
+React expects you to never modify state directly, instead use `this.setState()` when state changes occur. This is to be used in the other class methods of the component (not the constructor).
+
 ```javascript
 this.setState({name: 'Bob'});
 ```
