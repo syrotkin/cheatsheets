@@ -125,7 +125,7 @@ React expects you to never modify state directly, instead use `this.setState()` 
 this.setState({name: 'Bob'});
 ```
 
-# Binding `this`
+## Binding `this`
 
 `this` in the instance methods of the component needs to be the same as `this` in the constructor. Therefore, it needs to be bound as follows:
 
@@ -142,5 +142,17 @@ constructor(props) {
 // the instance method where 'this'is available now
 handleChange(event) {
   this.setState({input: event.target.value}); 
+}
+```
+
+## Event Listeners
+
+```javascript
+componentDidMount() {
+  document.addEventListener('keydown', this.handleKeyPress);
+
+}
+componentWillUnmount() {
+  document.removeEventListener('keydown', this.handleKeyPress);
 }
 ```
