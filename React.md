@@ -125,7 +125,22 @@ React expects you to never modify state directly, instead use `this.setState()` 
 this.setState({name: 'Bob'});
 ```
 
-# TODO: 
+# Binding `this`
 
-describe binding `this` to be done in the constructor to tell the component class methods about "this"
-e.g. `this.reset = this.reset.bind(this);`
+`this` in the instance methods of the component needs to be the same as `this` in the constructor. Therefore, it needs to be bound as follows:
+
+```javascript
+constructor(props) {
+  super(props);
+  this.state = {
+    input: ''
+  };
+  // binding, so that 'this' is available to handleChange
+  this.handleChange = this.handleChange.bind(this);
+}
+
+// the instance method where 'this'is available now
+handleChange(event) {
+  this.setState({input: event.target.value}); 
+}
+```
