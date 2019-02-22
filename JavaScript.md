@@ -32,3 +32,23 @@ let another = [...numbers, 4, 5];
 
 // another is [1, 2, 3, 4, 5]
 ```
+
+## TODO: fetch()
+
+### TODO
+
+```javascript
+fetch('')
+    .then()
+    .then();
+```
+
+## Array.fill
+
+Creates an array of `n` elements and fills it with predefined values.
+
+```javascript
+Array(6).fill(null);
+```
+
+## TODO: Array.concat

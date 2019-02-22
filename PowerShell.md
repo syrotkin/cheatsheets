@@ -94,6 +94,16 @@ Get-ChildItem $path | ForEach-Object {
 Copy-Item -Path $_.FullName -Destination ($path + "\English")
 ```
 
+### Write to a file
+Replace content of a file:
+```powershell
+Set-Content -Path $outPath -Value 'some value'
+```
+
+Append to a file:
+```powershell
+Add-Content -Path $outPath -Value 'some value'
+```
 
 ## Using .NET types
 ```powershell
