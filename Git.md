@@ -42,10 +42,12 @@ Stash only a certain file:
 ## View stash
 View the files in the stash:
 `git stash show` - If there is only one stash.
+
 `git stash show stash@{0}` - can specify the stash ID. 
 
 View the diff:
 `git stash show -p` - if there is only one stash.
+
 `git stash show -p stash@{0}` - can specify the stash ID.
 
 ## --force-with-lease
