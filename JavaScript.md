@@ -42,6 +42,16 @@ let result = Object.assign({}, original, change);
 
 ## Spread operator
 
+"Unwraps" an object. You can rewrite the previous example using the spread operator.
+
+```javascript
+let original = {firstName: 'Bob', lastName: 'Smith'};
+let change = {lastName: 'Jones'};
+let result = { ...original, ...change };
+
+// result is {firstName: 'Bob', lastName: 'Jones'}
+```
+
 "Unwraps" an array
 
 ```javascript
@@ -70,4 +80,10 @@ Creates an array of `n` elements and fills it with predefined values.
 Array(6).fill(null);
 ```
 
-## TODO: Array.concat
+## Array.concat
+
+```javascript
+[1].concat([2]);
+
+// returns a new array: [1, 2]
+```
