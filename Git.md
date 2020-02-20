@@ -110,3 +110,12 @@ We are in a feature branch:
 `git revert <commit> -m 1`
 
 https://stackoverflow.com/questions/5970889/why-does-git-revert-complain-about-a-missing-m-option
+
+## Delete local branches that do not exist in remote anymore
+
+```
+git fetch -p
+git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
+```
+
+https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-on-remote
