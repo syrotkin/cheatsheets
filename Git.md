@@ -122,4 +122,4 @@ https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-o
 
 ## Rename current branch
 
-`git branch -m`
+`git branch -m <new_name>`
