@@ -119,3 +119,7 @@ git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
 ```
 
 https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-on-remote
+
+## Rename current branch
+
+`git branch -m`
