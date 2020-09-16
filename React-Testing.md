@@ -2,16 +2,12 @@
 
 ## Mocking
 
-Mocking used in frontend-share-packages:
-https://github.xmedia.ch/Financescout24/frontend-shared-packages/pull/920
-https://github.xmedia.ch/Financescout24/frontend-shared-packages/pull/920/commits/8e18398c0d495b2a1e6db4236732a780f7921492
-
-// defining a mock function
+Defining a mock function
 ```
 const add = jest.fn((x, y) => 42);
 ```
 
-// mocking the imported object
+Mocking the imported object
 ```
 jest.mock('./add', () => {
 	add: jest.fn(() => 42)
