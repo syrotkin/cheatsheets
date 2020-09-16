@@ -98,26 +98,21 @@ fireEvent.click(counterButton);
 afterEach(cleanup);
 ```
 
-## Enzyme
-key way to render: shallow rendering
+## Enzyme vs. react-testing-library
+`Enzyme`: key way to render: shallow rendering (`shallow`). But other ways exist: `mount`, `render`.
 
-But other ways exist: `mount`, `render`, `shallow`
-
-react-testing-library: default way: normal rendering
-
-default: full rendering, no shallow rendering
+`react-testing-library`: default way: normal rendering. By default: full rendering, no shallow rendering
 	
-No shallow rendering in `react-testing-library`
+No shallow rendering in `react-testing-library`.
 
-the guy is a fan of using "data-testid"
+// the guy is a fan of using "data-testid"
 
-
-// react-testing-library
+`react-testing-library`:
 ```javascript
 const { getByTestId, debug, queryByTestId } = render(<NewMovie />);
 ```
 
-react-testing-library - integration testing by default
+`react-testing-library` - integration testing by default
 
 
 ## Snapshot Testing:
