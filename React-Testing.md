@@ -2,16 +2,12 @@
 
 ## Mocking
 
-Mocking used in frontend-share-packages:
-https://github.xmedia.ch/Financescout24/frontend-shared-packages/pull/920
-https://github.xmedia.ch/Financescout24/frontend-shared-packages/pull/920/commits/8e18398c0d495b2a1e6db4236732a780f7921492
-
-// defining a mock function
+Defining a mock function
 ```
 const add = jest.fn((x, y) => 42);
 ```
 
-// mocking the imported object
+Mocking the imported object
 ```
 jest.mock('./add', () => {
 	add: jest.fn(() => 42)
@@ -98,26 +94,21 @@ fireEvent.click(counterButton);
 afterEach(cleanup);
 ```
 
-## Enzyme
-key way to render: shallow rendering
+## Enzyme vs. react-testing-library
+`Enzyme`: key way to render: shallow rendering (`shallow`). But other ways exist: `mount`, `render`.
 
-But other ways exist: `mount`, `render`, `shallow`
-
-react-testing-library: default way: normal rendering
-
-default: full rendering, no shallow rendering
+`react-testing-library`: default way: normal rendering. By default: full rendering, no shallow rendering
 	
-No shallow rendering in `react-testing-library`
+No shallow rendering in `react-testing-library`.
 
-the guy is a fan of using "data-testid"
+// the guy is a fan of using "data-testid"
 
-
-// react-testing-library
+`react-testing-library`:
 ```javascript
 const { getByTestId, debug, queryByTestId } = render(<NewMovie />);
 ```
 
-react-testing-library - integration testing by default
+`react-testing-library` - integration testing by default
 
 
 ## Snapshot Testing:
