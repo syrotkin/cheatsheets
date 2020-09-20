@@ -163,3 +163,35 @@ expect(onSubmit).toHaveBeenCalledTimes(1);
     target: { value: 'hi' }
   });
 ```
+
+#### Global mocks
+You can mock external stuff, e.g.
+```javascript
+console.error = jest.fn();
+```
+
+#### Negative assertions
+```javascript
+expect(console.error).not.toHaveBeenCalled();
+```
+
+#### MemoryRouter
+You can use `MemoryRouter` from `react-router-dom` to mock the router:
+```javascript
+import { MemoryRouter } from 'react-router-dom';
+
+<MemoryRouter>
+  <Movie />
+</MemoryRouter>
+```
+
+#### mockClear
+You need to clear the mocks in between the calls. Otherwise, the mock invocations may be recorded wrong.
+e.g.  `console.error = jest.fn()` may be recorded as "invoked", once it has been invoked, even if it is not invoked in a particular test. To clear the mocks:
+
+```javascript
+afterEach(() => {
+  cleanup();
+  console.error.mockClear();
+});
+```
