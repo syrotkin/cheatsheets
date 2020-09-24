@@ -7,10 +7,6 @@
 
 This also helps if you have been rebasing and realized you need to reset, this helps to find the correct commit to reset to
 
-## Stash "added" (and not staged) files, too:
-`git stash push -m "NIEGBZH-2707: wip" --include-untracked`
-
-Saves all the files, including untracked
 
 ## diff without typing the whole path
 How to diff without typing the whole path:
@@ -33,24 +29,6 @@ or even:
 `git add -A`
 
 and it will realize that it is a rename. Git will see the delete plus the add with same content as a rename.
-
-## Stash only certain files
-Stash only a certain file:
-
-`git stash push -m "message" <path>`
-
-## View stash
-View the files in the stash:
-
-`git stash show` - If there is only one stash.
-
-`git stash show stash@{0}` - can specify the stash ID. 
-
-View the diff:
-
-`git stash show -p` - if there is only one stash.
-
-`git stash show -p stash@{0}` - can specify the stash ID.
 
 ## --force-with-lease
 Do not do 
@@ -123,3 +101,29 @@ https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-o
 ## Rename current branch
 
 `git branch -m <new_name>`
+
+
+# Stash
+
+## Stash "added" (and not staged) files, too:
+`git stash push -m "NIEGBZH-2707: wip" --include-untracked`
+
+Saves all the files, including untracked
+
+## Stash only certain files
+Stash only a certain file:
+
+`git stash push -m "message" <path>`
+
+## View stash
+View the files in the stash:
+
+`git stash show` - If there is only one stash.
+
+`git stash show stash@{0}` - can specify the stash ID. 
+
+View the diff:
+
+`git stash show -p` - if there is only one stash.
+
+`git stash show -p stash@{0}` - can specify the stash ID.
