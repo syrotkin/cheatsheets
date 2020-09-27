@@ -186,3 +186,30 @@ afterEach(() => {
   console.error.mockClear();
 });
 ```
+
+#### Mocking globals
+Need package `jest-fetch-mock`.
+`yarn add jest-fetch-mock`
+or
+`npm install jest-fetch-mock`
+
+```javascript
+  global.fetch = require('jest-fetch-mock');
+
+  fetch.mockResponseOnce(JSON.stringify({
+    movie: {
+      id: "hi",
+      title: "level up"
+    }
+  }));
+```
+
+#### waitForElement
+To render an element that may be dependent on an AJAX call, use `waitForElement` (`react-testing-library`).
+```javascript
+await waitForElement(() => getByText('level up'));
+// OR
+await waitForElement(() => getByTestId('movie-title'));
+```
+
+Enzyme: tell to rerender (instead of waiting).
