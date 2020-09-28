@@ -213,3 +213,17 @@ await waitForElement(() => getByTestId('movie-title'));
 ```
 
 Enzyme: tell to rerender (instead of waiting).
+
+#### Code coverage
+```
+npm test --coverage
+// or
+yarn test --coverage
+```
+
+#### Resources on Testing
+https://github.com/testing-library/react-testing-library
+
+https://medium.com/@kentcdodds
+
+(e.g. Why I never use shallow rendering)
