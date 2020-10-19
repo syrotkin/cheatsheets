@@ -165,3 +165,14 @@ $array += 2
 # OR:
 $array = 1, 2, 3
 ```
+
+## Hash tables:
+### Create and populate:
+```powershell
+$hashTable = @{}
+$hashTable["foo"] = "bar"
+```
+### Check for keys:
+```powershell
+if ($hashTable.ContainsKey("foo")) {... } # Same as .NET
+```
