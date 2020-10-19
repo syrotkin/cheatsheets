@@ -1,3 +1,28 @@
+- [Determine installed PowerShell version](#determine-installed-powershell-version)
+- [Run a Windows executable](#run-a-windows-executable)
+- [Setting environment variables from the command line](#setting-environment-variables-from-the-command-line)
+- [Regular expressions with captures:](#regular-expressions-with-captures-)
+- [Escape characters](#escape-characters)
+- [Working with files](#working-with-files)
+  * [Get content](#get-content)
+  * [Tail](#tail)
+  * [Working with file objects](#working-with-file-objects)
+  * [Iterate through files in a directory:](#iterate-through-files-in-a-directory-)
+  * [Copy file to a different folder:](#copy-file-to-a-different-folder-)
+  * [Write to a file](#write-to-a-file)
+- [Using .NET types](#using-net-types)
+- [Pipeline, foreach](#pipeline--foreach)
+- [Sorting](#sorting)
+- [Start a process](#start-a-process)
+- [Running commands on a remote machine](#running-commands-on-a-remote-machine)
+- [Arrays](#arrays)
+  * [Create and populate](#create-and-populate)
+- [Hash tables:](#hash-tables-)
+  * [Create and populate:](#create-and-populate-)
+  * [Check for keys:](#check-for-keys-)
+  
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 ## Determine installed PowerShell version
 ```powershell
 $PSVersionTable.PSVersion
