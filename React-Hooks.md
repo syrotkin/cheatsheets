@@ -98,6 +98,24 @@ dispatch({ type: 'add' });
 
 ## useMemo
 
+`reverseWord` is called only when `title` changes
+
 ```javascript
 const HeaderReversed = useMemo(() => reverseWord(title), [title]);
+```
+
+## useDebugValue
+Debug hook, not often used. May be useful to library authors.
+
+`useDebugValue('foo')`
+
+Usage: will display 'foo' next to the hook in React Dev Tools (Components)
+
+## useEffect - run only on mount
+Essentially, this imitates the behavior of `componentDidMount`:
+
+```javascript
+  useEffect(() => {
+    fetchDishes();
+  }, []);
 ```
