@@ -119,3 +119,33 @@ Essentially, this imitates the behavior of `componentDidMount`:
     fetchDishes();
   }, []);
 ```
+
+`useEffect` cannot contain an `async` arrow function. You have to extract the async code into a separate function, e.g. `fetchDishes` above, and run that function, without awaiting it.
+
+### useEffect - run only on a change of value
+`useEffect` will run only when `name` changes:
+
+```
+  useEffect(() => {
+    fetchDishes();
+  }, [name]);
+```
+
+## useLayoutEffect
+Fires after all DOM mutations. Use case: read layout of DOM, re-render.
+
+See `useBodyScrollLock` at https://usehooks.com 
+
+
+## Cleanup
+~ `componentWillUnmount`. When the effect of the hook goes away, you can do a cleanup. Return a function from a hook to do that.
+
+```javascript
+useLayoutEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    return () => {
+        document.body.style.overflow = '';
+    };
+});
+```
