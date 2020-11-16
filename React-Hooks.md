@@ -149,3 +149,12 @@ useLayoutEffect(() => {
     };
 });
 ```
+
+## Next Steps
+https://reactjs.org/docs/hooks-intro.html
+
+https://github.com/rehooks/awesome-react-hooks
+
+https://nikgraf.github.io/react-hooks
+
+https://usehooks.com
