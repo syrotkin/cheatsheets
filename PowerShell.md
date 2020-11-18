@@ -1,6 +1,9 @@
-- [Determine installed PowerShell version](#determine-installed-powershell-version)
-- [Run a Windows executable](#run-a-windows-executable)
-- [Setting environment variables from the command line](#setting-environment-variables-from-the-command-line)
+- [OS Interaction](#os-interaction)
+  * [Determine installed PowerShell version](#determine-installed-powershell-version)
+  * [Run a Windows executable](#run-a-windows-executable)
+  * [Setting environment variables from the command line](#setting-environment-variables-from-the-command-line)
+  * [Start a process](#start-a-process)
+  * [Running commands on a remote machine](#running-commands-on-a-remote-machine)
 - [Regular expressions with captures:](#regular-expressions-with-captures-)
 - [Escape characters](#escape-characters)
 - [Working with files](#working-with-files)
@@ -13,8 +16,6 @@
 - [Using .NET types](#using-net-types)
 - [Pipeline, foreach](#pipeline--foreach)
 - [Sorting](#sorting)
-- [Start a process](#start-a-process)
-- [Running commands on a remote machine](#running-commands-on-a-remote-machine)
 - [Arrays](#arrays)
   * [Create and populate](#create-and-populate)
 - [Hash tables:](#hash-tables-)
@@ -23,18 +24,20 @@
   
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
-## Determine installed PowerShell version
+## OS Interaction
+
+### Determine installed PowerShell version
 ```powershell
 $PSVersionTable.PSVersion
 ```
 
-## Run a Windows executable
+### Run a Windows executable
 
 ```powershell
 & .\myProgram.exe
 ```
 
-## Setting environment variables from the command line
+### Setting environment variables from the command line
 To set the variable in the CMD shell, do the following:
 
     set OSY=Syrotkin    // this will change the variable in the current window
@@ -60,6 +63,19 @@ Otherwise, try this, using .NET libraries:
 # sets the environment variable OSY to  "Process1" in the current window (only)
 ```
 
+### Start a process
+Start-Process "FilePath"
+
+
+### Running commands on a remote machine
+
+`Invoke-Command` - has options to run on a remote machine
+
+`-ComputerName <name1> -ScriptBlock {...}`
+
+`-ComputerName <name1> -FilePath <filepath to ps1 script>`
+
+
 ## Regular expressions with captures:
 
 ```powershell
@@ -70,7 +86,6 @@ if ($line -match $pattern) {
 	Write-Output "$($Matches[1])_$($Matches[2])"  # writes <EGRID>_<GF>
 }
 ```
-	
 	
 ## Escape characters
 
@@ -168,18 +183,6 @@ foreach ($item in $array) {
 ```powershell
 $set = $set | Sort-Object
 ```
-
-## Start a process
-Start-Process "FilePath"
-
-
-## Running commands on a remote machine
-
-`Invoke-Command` - has options to run on a remote machine
-
-`-ComputerName <name1> -ScriptBlock {...}`
-
-`-ComputerName <name1> -FilePath <filepath to ps1 script>`
 
 ## Arrays
 ### Create and populate
