@@ -89,6 +89,16 @@ We are in a feature branch:
 
 https://stackoverflow.com/questions/5970889/why-does-git-revert-complain-about-a-missing-m-option
 
+## Revert changes to a specific file
+
+`git checkout HEAD~1 -- /file/to/restore`
+
+or
+
+`git checkout <commit_hash> -- /file/to/restore`
+
+https://stackoverflow.com/questions/215718/how-can-i-reset-or-revert-a-file-to-a-specific-revision
+
 ## Delete local branches that do not exist in remote anymore
 
 ```
