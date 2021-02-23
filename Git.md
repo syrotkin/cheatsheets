@@ -137,3 +137,12 @@ View the diff:
 `git stash show -p` - if there is only one stash.
 
 `git stash show -p stash@{0}` - can specify the stash ID.
+
+# Config
+
+## List all
+
+`git config -l`
+`git config --local -l`
+`git config --global -l`
+`git config --system -l`
