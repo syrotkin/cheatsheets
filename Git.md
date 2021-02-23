@@ -143,6 +143,9 @@ View the diff:
 ## List all
 
 `git config -l`
+
 `git config --local -l`
+
 `git config --global -l`
+
 `git config --system -l`
