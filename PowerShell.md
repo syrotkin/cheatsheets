@@ -21,7 +21,8 @@
 - [Hash tables:](#hash-tables-)
   * [Create and populate:](#create-and-populate-)
   * [Check for keys:](#check-for-keys-)
-  
+- [Aliases](#aliases)
+ 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## OS Interaction
@@ -204,3 +205,8 @@ $hashTable["foo"] = "bar"
 ```powershell
 if ($hashTable.ContainsKey("foo")) {... } # Same as .NET
 ```
+
+## Aliases
+`Get-Alias cd # Returns Set-Location` 
+
+`Get-Alias pwd # Returns Get-Location`
