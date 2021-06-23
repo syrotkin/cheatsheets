@@ -149,3 +149,14 @@ View the diff:
 `git config --global -l`
 
 `git config --system -l`
+## Configure the name and email address:
+### Globally:
+```
+git config --global user.name "Your Name"
+git config --global user.email "youremail@yourdomain.com"
+```
+### For one repository:
+```
+git config user.name "Your Name"
+git config user.email "youremail@yourdomain.com"
+```
