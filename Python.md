@@ -91,4 +91,7 @@ df["label"] = df["label"].apply(lambda value: value + 2)
 ```python
 # get the first row
 df.iloc[0]
+
+# get all the rows, and all but the last one columns:
+df.iloc[:,:-1]
 ```
