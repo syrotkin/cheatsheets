@@ -32,6 +32,8 @@ add2(5)
 
 # pandas
 
+## DataFrame
+
 ```python
 import pandas as pd
 
@@ -83,4 +85,10 @@ df["label"].apply(lambda value: value + 2)
 
 # To replace the values in the original DataFrame, you have to assign it back:
 df["label"] = df["label"].apply(lambda value: value + 2)
+```
+
+`iloc` is the integer indexing of a DataFrame
+```python
+# get the first row
+df.iloc[0]
 ```
