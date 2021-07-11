@@ -72,6 +72,11 @@ type(df["label"])
 > pandas.core.series.Series
 ```
 
+Can apply `value_counts()` to a series to get another series (like a "group by")
+```python
+df["label"].value_counts()
+```
+
 ```python
 # Can apply a lambda function to every element of the series:
 df["label"].apply(lambda value: value + 2)
