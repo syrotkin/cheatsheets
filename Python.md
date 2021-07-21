@@ -44,6 +44,21 @@ type(df)
 > pandas.core.frame.DataFrame
 ```
 
+## Make a DataFrame from dictionary (defining columns):
+From: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html
+```python
+d = {'col1': [1, 2], 'col2': [3, 4]}
+df = pd.DataFrame(data=d)
+df
+```
+Output:
+```
+>    col1  col2
+> 0     1     3
+> 1     2     4
+```
+
+
 ```python
 # returns a DataFrame of True/False values, isnull() is evaluated for every cell of the original DataFrame
 df.isnull()
