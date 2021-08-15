@@ -58,6 +58,13 @@ Output:
 > 1     2     4
 ```
 
+Equivalently:
+```python
+d = [[1, 3],
+    [2, 4]]
+d.columns = ['col1', 'col2']
+```
+
 
 ```python
 # returns a DataFrame of True/False values, isnull() is evaluated for every cell of the original DataFrame
