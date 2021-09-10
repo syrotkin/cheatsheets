@@ -79,6 +79,11 @@ We are in a feature branch:
 
 `git merge develop` -- merges `develop` into the current branch. The current branch will be aware of all the changes in `develop`.
 
+## List remotes:
+```
+git remote -v
+```
+
 ## gitk
 
 `gitk <file path>` -- see history for one file
@@ -159,4 +164,11 @@ git config --global user.email "youremail@yourdomain.com"
 ```
 git config user.name "Your Name"
 git config user.email "youremail@yourdomain.com"
+```
+
+## Change the author of the previous commit 
+From: https://www.git-tower.com/learn/git/faq/change-author-name-email/
+
+```
+git commit --amend --author="John Doe <john@doe.org>"
 ```
