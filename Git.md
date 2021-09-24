@@ -1,3 +1,5 @@
+# diff, log, show
+
 ## reflog
 `reflog` shows a log of changes to the local repository `HEAD`
 
@@ -7,7 +9,6 @@
 
 This also helps if you have been rebasing and realized you need to reset, this helps to find the correct commit to reset to
 
-
 ## diff without typing the whole path
 How to diff without typing the whole path:
 
@@ -15,8 +16,16 @@ https://stackoverflow.com/questions/14107546/how-to-git-diff-without-typing-the-
 
 `git diff **/Foo.cs`
 
+## log all
+`git log --all`
 
-## Make git understand rename
+shows the log for all branches
+
+## List files in a commit (without the diff)
+`git show -r --name-only HEAD`
+
+
+# Make git understand rename
 Tell git a renamed file is really a rename:
 
 https://stackoverflow.com/questions/4708655/git-renamed-file-manually-git-confused
@@ -30,7 +39,7 @@ or even:
 
 and it will realize that it is a rename. Git will see the delete plus the add with same content as a rename.
 
-## --force-with-lease
+# --force-with-lease
 Do not do 
 
 `git push --force`
@@ -41,44 +50,10 @@ DO:
 
 https://developer.atlassian.com/blog/2015/04/force-with-lease/
 
-## log all
-`git log --all`
-
-shows the log for all branches
-
-## Submodules
-Clone including submodules:
-
-https://stackoverflow.com/questions/3796927/how-to-git-clone-including-submodules
-
-`git clone --recurse-submodules -j8 git://github.com/foo/bar.git`
-
-
-Update submodules for already cloned repos:
-
-`git submodule update --init --recursive`
-
-
-If you have updated your submodules and now want to point to the TIP of the submodules project from your main project:
-
-`git submodule update --recursive --remote`
-
-https://stackoverflow.com/questions/1030169/easy-way-to-pull-latest-of-all-git-submodules
-
-## List files in a commit (without the diff)
-`git show -r --name-only HEAD`
-
 
 
 
 # Branches
-# Delete local branches that do not exist in remote anymore
-```
-git fetch -p
-git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
-```
-
-https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-on-remote
 
 ## Rename current branch
 
@@ -90,6 +65,15 @@ We are in a feature branch:
 `git rebase develop` -- rebases current onto `develop`. The current branch will be aware of all the changes in `develop`.
 
 `git merge develop` -- merges `develop` into the current branch. The current branch will be aware of all the changes in `develop`.
+
+## Delete local branches that do not exist in remote anymore
+```
+git fetch -p
+git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
+```
+
+https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-on-remote
+
 
 # Undo
 ## Undo changes to a a non-staged file:
@@ -110,6 +94,7 @@ or
 
 https://stackoverflow.com/questions/215718/how-can-i-reset-or-revert-a-file-to-a-specific-revision
 
+
 # Remotes
 
 ## List remotes:
@@ -122,9 +107,11 @@ git remote -v
 git remote set-url origin <url>
 ```
 
+
 # gitk
 
 `gitk <file path>` -- see history for one file
+
 
 # Stash
 
@@ -151,6 +138,7 @@ View the diff:
 
 `git stash show -p stash@{0}` - can specify the stash ID.
 
+
 # Config
 
 ## List all
@@ -162,6 +150,7 @@ View the diff:
 `git config --global -l`
 
 `git config --system -l`
+
 ## Configure the name and email address:
 ### Globally:
 ```
@@ -180,3 +169,23 @@ From: https://www.git-tower.com/learn/git/faq/change-author-name-email/
 ```
 git commit --amend --author="John Doe <john@doe.org>"
 ```
+
+
+# Submodules
+Clone including submodules:
+
+https://stackoverflow.com/questions/3796927/how-to-git-clone-including-submodules
+
+`git clone --recurse-submodules -j8 git://github.com/foo/bar.git`
+
+
+Update submodules for already cloned repos:
+
+`git submodule update --init --recursive`
+
+
+If you have updated your submodules and now want to point to the TIP of the submodules project from your main project:
+
+`git submodule update --recursive --remote`
+
+https://stackoverflow.com/questions/1030169/easy-way-to-pull-latest-of-all-git-submodules
