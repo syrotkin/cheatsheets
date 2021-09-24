@@ -69,43 +69,10 @@ https://stackoverflow.com/questions/1030169/easy-way-to-pull-latest-of-all-git-s
 `git show -r --name-only HEAD`
 
 
-## Undo changes to a a non-staged file:
-`git checkout <file>`
 
-## Merging and rebasing
-We are in a feature branch:
 
-`git rebase develop` -- rebases current onto `develop`. The current branch will be aware of all the changes in `develop`.
-
-`git merge develop` -- merges `develop` into the current branch. The current branch will be aware of all the changes in `develop`.
-
-## List remotes:
-```
-git remote -v
-```
-
-## gitk
-
-`gitk <file path>` -- see history for one file
-
-## Git revert commit
-
-`git revert <commit> -m 1`
-
-https://stackoverflow.com/questions/5970889/why-does-git-revert-complain-about-a-missing-m-option
-
-## Revert changes to a specific file
-
-`git checkout HEAD~1 -- /file/to/restore`
-
-or
-
-`git checkout <commit_hash> -- /file/to/restore`
-
-https://stackoverflow.com/questions/215718/how-can-i-reset-or-revert-a-file-to-a-specific-revision
-
-## Delete local branches that do not exist in remote anymore
-
+# Branches
+# Delete local branches that do not exist in remote anymore
 ```
 git fetch -p
 git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
@@ -117,6 +84,47 @@ https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-o
 
 `git branch -m <new_name>`
 
+## Merging and rebasing
+We are in a feature branch:
+
+`git rebase develop` -- rebases current onto `develop`. The current branch will be aware of all the changes in `develop`.
+
+`git merge develop` -- merges `develop` into the current branch. The current branch will be aware of all the changes in `develop`.
+
+# Undo
+## Undo changes to a a non-staged file:
+`git checkout <file>`
+
+## Git revert commit
+
+`git revert <commit> -m 1`
+
+https://stackoverflow.com/questions/5970889/why-does-git-revert-complain-about-a-missing-m-option
+
+## Revert changes to a specific file
+`git checkout HEAD~1 -- /file/to/restore`
+
+or
+
+`git checkout <commit_hash> -- /file/to/restore`
+
+https://stackoverflow.com/questions/215718/how-can-i-reset-or-revert-a-file-to-a-specific-revision
+
+# Remotes
+
+## List remotes:
+```
+git remote -v
+```
+
+## Update remote:
+```
+git remote set-url origin <url>
+```
+
+# gitk
+
+`gitk <file path>` -- see history for one file
 
 # Stash
 
