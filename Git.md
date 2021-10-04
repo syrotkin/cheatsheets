@@ -125,7 +125,10 @@ Stash only a certain file:
 
 `git stash push -m "message" <path>`
 
-## View stash
+## List stashes
+`git stash list`
+
+## View files in stash
 View the files in the stash:
 
 `git stash show` - If there is only one stash.
