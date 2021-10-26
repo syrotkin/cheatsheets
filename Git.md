@@ -39,9 +39,6 @@ or even:
 
 and it will realize that it is a rename. Git will see the delete plus the add with same content as a rename.
 
-# set-upstream
-`git push --set-upstream origin <branch-name>`
-
 # --force-with-lease
 Do not do 
 
@@ -107,6 +104,9 @@ git remote -v
 ```
 git remote set-url origin <url>
 ```
+
+## set-upstream
+`git push --set-upstream origin <branch-name>`
 
 
 # gitk
