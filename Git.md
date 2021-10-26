@@ -39,6 +39,9 @@ or even:
 
 and it will realize that it is a rename. Git will see the delete plus the add with same content as a rename.
 
+# set-upstream
+`git push --set-upstream origin <branch-name>`
+
 # --force-with-lease
 Do not do 
 
@@ -49,8 +52,6 @@ DO:
 `git push --force-with-lease`
 
 https://developer.atlassian.com/blog/2015/04/force-with-lease/
-
-
 
 
 # Branches
