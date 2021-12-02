@@ -72,6 +72,11 @@ git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
 
 https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-on-remote
 
+Adding it as an alias (note the `!` character):
+```
+[alias]
+	deletegonebranches = !git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
+```
 
 # Undo
 ## Undo changes to a a non-staged file:
