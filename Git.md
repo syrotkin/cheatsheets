@@ -72,7 +72,7 @@ git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
 
 https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-on-remote
 
-Adding it as an alias (note the `!` character):
+Adding it as an alias (note the `!git` prefix):
 ```
 [alias]
 	deletegonebranches = !git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
