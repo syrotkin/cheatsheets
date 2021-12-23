@@ -35,7 +35,7 @@ set ValidFrom = TIMESTAMP '2021-07-06 13:08:52.00'
 where Product_Id = 2;
 
 
-### Sysdate
+### Sysdate and CURRENT_DATE
 it is `GETDATE()` in oracle
 
 ```
