@@ -29,10 +29,11 @@ where ModifiedDate >= DATE '2021-04-22'
 ```
 
 ## Timestamp types:
-
+```sql
 update Product
 set ValidFrom = TIMESTAMP '2021-07-06 13:08:52.00'
 where Product_Id = 2;
+```
 
 
 ### Sysdate and CURRENT_DATE
