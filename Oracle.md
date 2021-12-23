@@ -27,3 +27,35 @@ Example with data type TIMESTAMP(7)
 SELECT * FROM Table
 where ModifiedDate >= DATE '2021-04-22'
 ```
+
+## Timestamp types:
+
+update Product
+set ValidFrom = TIMESTAMP '2021-07-06 13:08:52.00'
+where Product_Id = 2;
+
+
+### Sysdate
+it is `GETDATE()` in oracle
+
+```
+select sysdate from dual;
+```
+
+```
+select current_date from dual;
+```
+
+You can use `current_date` in queries:
+```
+and modified_date <= (select current_date from dual)
+```
+
+
+### Commit
+
+Don't forget to commit when you manipulate the data. Always?
+
+```
+COMMIT WORK;
+```
