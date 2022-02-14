@@ -24,6 +24,8 @@ shows the log for all branches
 ## List files in a commit (without the diff)
 `git show -r --name-only HEAD`
 
+## Show the log of a different branch
+`git log <branch_name>`
 
 # Make git understand rename
 Tell git a renamed file is really a rename:
@@ -77,6 +79,12 @@ Adding it as an alias (note the `!git` prefix):
 [alias]
 	deletegonebranches = !git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
 ```
+
+## Cherry pick
+```
+git cherry-pick <commit_sha>
+```
+This will cherry pick commit <commit_sha> from the respective branch **into the current branch**
 
 # Undo
 ## Undo changes to a a non-staged file:
