@@ -62,9 +62,9 @@ https://developer.atlassian.com/blog/2015/04/force-with-lease/
 ## Merging and rebasing
 We are in a feature branch:
 
-`git rebase develop` -- rebases current onto `develop`. The current branch will be aware of all the changes in `develop`.
+`git rebase master` -- rebases current onto `master`. The current branch will be aware of all the changes in `master`.
 
-`git merge develop` -- merges `develop` into the current branch. The current branch will be aware of all the changes in `develop`.
+`git merge master` -- merges `master` into the current branch. The current branch will be aware of all the changes in `master`.
 
 ## Delete local branches that do not exist in remote anymore
 ```
