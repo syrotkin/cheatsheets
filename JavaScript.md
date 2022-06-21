@@ -62,9 +62,7 @@ let another = [...numbers, 4, 5];
 // another is [1, 2, 3, 4, 5]
 ```
 
-## TODO: fetch()
-
-### TODO
+## fetch()
 
 ```javascript
 fetch('')
@@ -86,4 +84,25 @@ Array(6).fill(null);
 [1].concat([2]);
 
 // returns a new array: [1, 2]
+```
+
+## Check if an object has a property
+```javascript
+let array = [1, 2];
+"length" in array
+// returns true
+
+let person = { name: "A"};
+"name" in person
+// returns true
+
+```
+
+## Check if an array has an element
+```javascript
+[1, 2, 3].indexOf(2)
+// returns 1
+
+[1, 2, 3].indexOf(4)
+// returns -1
 ```
