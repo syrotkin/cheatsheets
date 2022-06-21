@@ -86,7 +86,7 @@ Array(6).fill(null);
 // returns a new array: [1, 2]
 ```
 
-## Check if an object has a property
+## Check if an object has a property: in
 ```javascript
 let array = [1, 2];
 "length" in array
@@ -98,7 +98,7 @@ let person = { name: "A"};
 
 ```
 
-## Check if an array has an element
+## Check if an array has an element: indexOf
 ```javascript
 [1, 2, 3].indexOf(2)
 // returns 1
