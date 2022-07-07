@@ -95,10 +95,18 @@ let array = [1, 2];
 let person = { name: "A"};
 "name" in person
 // returns true
-
 ```
 
-## Check if an array has an element: indexOf
+## Check if an array has an element: includes
+```
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// expected output: true
+```
+See: [Array.prototype.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
+
+## (Another way): Check if an array has an element: indexOf
 ```javascript
 [1, 2, 3].indexOf(2)
 // returns 1
@@ -106,3 +114,5 @@ let person = { name: "A"};
 [1, 2, 3].indexOf(4)
 // returns -1
 ```
+
+
