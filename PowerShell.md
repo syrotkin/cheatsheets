@@ -87,6 +87,11 @@ if ($line -match $pattern) {
 	Write-Output "$($Matches[1])_$($Matches[2])"  # writes <EGRID>_<GF>
 }
 ```
+
+## "grep": search files for patterns
+```powershell
+Select-String -Path "Users\*.csv" -Pattern "Joe"
+```
 	
 ## Escape characters
 
