@@ -4,8 +4,10 @@
   * [Setting environment variables from the command line](#setting-environment-variables-from-the-command-line)
   * [Start a process](#start-a-process)
   * [Running commands on a remote machine](#running-commands-on-a-remote-machine)
-- [Regular expressions with captures:](#regular-expressions-with-captures-)
-- [Escape characters](#escape-characters)
+- [Text (Strings)](#text--strings-)
+  * [Regular expressions with captures:](#regular-expressions-with-captures-)
+  * ["grep": search files for patterns](#-grep---search-files-for-patterns)
+  * [Escape characters](#escape-characters)
 - [Working with files](#working-with-files)
   * [Get content](#get-content)
   * [Tail](#tail)
@@ -77,7 +79,9 @@ Start-Process "FilePath"
 `-ComputerName <name1> -FilePath <filepath to ps1 script>`
 
 
-## Regular expressions with captures:
+## Text (Strings)
+
+### Regular expressions with captures:
 
 ```powershell
 $pattern = '.+\(EGRID: (CH\d{12}), GF: (A\d\d-\d{6})\).+'
@@ -88,12 +92,12 @@ if ($line -match $pattern) {
 }
 ```
 
-## "grep": search files for patterns
+### "grep": search files for patterns
 ```powershell
 Select-String -Path "Users\*.csv" -Pattern "Joe"
 ```
 	
-## Escape characters
+### Escape characters
 
 \`t -- inserts a tab character
 
