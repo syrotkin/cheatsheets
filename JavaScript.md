@@ -97,7 +97,7 @@ let person = { name: "A"};
 // returns true
 ```
 
-## Check if an array has an element: includes
+## Check if an array has an element: `includes`
 ```
 const array1 = [1, 2, 3];
 
@@ -106,7 +106,7 @@ console.log(array1.includes(2));
 ```
 See: [Array.prototype.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
 
-## (Another way): Check if an array has an element: indexOf
+## (Another way): Check if an array has an element: `indexOf`
 ```javascript
 [1, 2, 3].indexOf(2)
 // returns 1
@@ -115,4 +115,12 @@ See: [Array.prototype.includes()](https://developer.mozilla.org/en-US/docs/Web/J
 // returns -1
 ```
 
+## `concat` (Array.prototype.concat): concatenate arrays or values:
+You can concat arrays or values:
+```javascript
+const array1 = ['a', 'b', 'c'].concat(['d', 'e', 'f']);
+// > Array ["a", "b", "c", "d", "e", "f"]
+const array2 = ['a', 'b', 'c'].concat('d');
+// > Array ["a", "b", "c", "d"]
+```
 
