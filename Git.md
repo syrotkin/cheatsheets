@@ -180,6 +180,11 @@ git config user.name "Your Name"
 git config user.email "youremail@yourdomain.com"
 ```
 
+## Configure VS Code as the editor (globally)
+```
+git config --global core.editor "code --wait"
+```
+
 ## Change the author of the previous commit 
 From: https://www.git-tower.com/learn/git/faq/change-author-name-email/
 
