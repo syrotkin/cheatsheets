@@ -86,6 +86,11 @@ git cherry-pick <commit_sha>
 ```
 This will cherry pick commit <commit_sha> from the respective branch **into the current branch**
 
+## Interactive rebase
+```
+git rebase -i <last_commit_you_definitely_keep>
+```
+
 # Undo
 ## Undo changes to a a non-staged file:
 `git checkout <file>`
