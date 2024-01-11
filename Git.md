@@ -90,6 +90,8 @@ This will cherry pick commit <commit_sha> from the respective branch **into the 
 ```
 git rebase -i <last_commit_you_definitely_keep>
 ```
+`<last_commit_you_definitely_keep>` will not be included in the list of commits to pick or drop.
+
 
 # Undo
 ## Undo changes to a a non-staged file:
