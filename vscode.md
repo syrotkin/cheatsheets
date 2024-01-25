@@ -1,5 +1,5 @@
 Example of workspace Settings
-```
+```json
 {
     "gitlens.telemetry.enabled": false,
     "[plaintext]": {
@@ -9,7 +9,7 @@ Example of workspace Settings
 ```
 
 Example of User settings:
-```
+```json
 {
   "security.workspace.trust.untrustedFiles": "open",
   "editor.acceptSuggestionOnCommitCharacter": false,
