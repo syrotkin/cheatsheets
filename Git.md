@@ -200,6 +200,42 @@ From: https://www.git-tower.com/learn/git/faq/change-author-name-email/
 git commit --amend --author="John Doe <john@doe.org>"
 ```
 
+## Example of file under C:\Program Files\git\etc\gitconfig
+```
+[diff "astextplain"]
+	textconv = astextplain
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[http]
+	sslBackend = openssl
+	sslCAInfo = C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+[core]
+	autocrlf = true
+	fscache = true
+	symlinks = false
+[pull]
+	rebase = false
+[credential]
+	helper = manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[init]
+	defaultBranch = master
+[alias]
+	deletegonebranches = !git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
+```
+
+## Example of C:\Users\Oleksiy.Syrotkin.DEV-ZH-321\.gitconfig
+```
+[safe]
+	directory = C:/dev
+	directory = C:/dev/practice/github/cheatsheets
+[core]
+	editor = code --wait
+```
 
 # Submodules
 Clone including submodules:
