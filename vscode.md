@@ -1,13 +1,3 @@
-Example of workspace Settings
-```json
-{
-    "gitlens.telemetry.enabled": false,
-    "[plaintext]": {
-        "editor.inlineSuggest.enabled": false
-    }
-}
-```
-
 Example of User settings:
 ```json
 {
@@ -62,6 +52,15 @@ Example of User settings:
   "[typescript]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[plaintext]": {
+    "editor.inlineSuggest.enabled": false,
+    "editor.wordBasedSuggestions": "off",
+    "editor.quickSuggestions": {
+        "other": "off",
+        "comments": "off",
+        "strings": "off"
+    }
   },
   "typescript.updateImportsOnFileMove.enabled": "always"
 }
