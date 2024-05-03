@@ -22,6 +22,19 @@ l.insert.__doc__
 # returns the documentation string about the insert method
 ```
 
+# Formatting
+
+## Python 2
+```
+>>> "hello, %s #%d" % ("world", 1)
+'hello, world #1'
+```
+## Python 3 (and also Python 2)
+```
+>>> "hello, {} #{}".format("world", 1)
+'hello, world #1'
+```
+
 # Lambdas
 
 ```python
