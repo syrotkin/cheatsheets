@@ -34,6 +34,14 @@ l.insert.__doc__
 >>> "hello, {} #{}".format("world", 1)
 'hello, world #1'
 ```
+### F-strings:
+```
+>>> who = "world"
+>>> number = 1
+>>> f"hello, {who} #{number}"
+'hello, world #1'
+```
+
 
 # Lambdas
 
