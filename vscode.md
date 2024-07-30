@@ -66,3 +66,61 @@ Example of User settings:
 }
 
 ```
+
+Another example:
+- do not double-click file title to keep the file open
+- create file extension associations to languages
+- create language associtations to file encodings
+- you can also use `workbench.colorCustomizations` in workspace settings, so that  when you go to the command `Open Workspace Settings (JSON)`, so that, e.g., each project colors VS Code differently
+  
+```
+{
+    "workbench.colorTheme": "Quiet Light",
+    "security.workspace.trust.untrustedFiles": "open",
+    "hg.useBookmarks": true,
+    "hg.lineAnnotationEnabled": true,
+    // do not need to double click file to keep it open
+    "workbench.editor.enablePreview": false,
+    "[plaintext]": {
+        "editor.quickSuggestions": {
+            "other": "off",
+            "comments": "off",
+            "strings": "off"
+        },
+    },
+    "files.associations": {
+        "*.rc": "rc-script",
+        "*.versioninfo": "rc-script",
+        "*.iss": "innosetup"
+    },
+    "[innosetup]": {
+        "files.encoding": "windows1252"
+    },
+    "[rc-script]": {
+        "files.encoding": "windows1252"
+    },
+    "[ini]": {
+        "editor.quickSuggestions": {
+            "other": "off",
+            "comments": "off",
+            "strings": "off"
+        }
+    },
+    "python.languageServer": "Pylance",
+    "[python]": {
+        "files.encoding": "windows1252",
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "[pascal]": {
+        "files.encoding": "windows1252"
+    },
+    "[objectpascal]": {
+        "files.encoding": "windows1252"
+    },
+    "pascal.codeNavigation": "file",
+    "pascal.tags.autoGenerate": false,
+    "telemetry.telemetryLevel": "off",
+    "dotnetAcquisitionExtension.enableTelemetry": false,
+    "github.copilot.editor.enableAutoCompletions": true
+}
+```
