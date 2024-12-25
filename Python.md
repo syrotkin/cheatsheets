@@ -51,6 +51,13 @@ add2(5)
 > 7
 ```
 
+# PyTorch
+
+```
+a = torch.tensor([1, 2, 3])
+a.shape # returns result of type Size 
+```
+
 # pandas
 
 ## DataFrame
