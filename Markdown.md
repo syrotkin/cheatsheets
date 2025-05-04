@@ -2,6 +2,8 @@
 
 ## KaTeX
 
+**Note:** GitHub supports [MathJax](https://github.blog/changelog/2022-05-19-render-mathematical-expressions-in-markdown/) and not KaTex, so KaTeX is not displayed properly on GitHub. However, it has been displayed properly in the Jupyter Notebooks that I have tried.
+
 ### Inline  rendering:
 
 `$`
