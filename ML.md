@@ -205,3 +205,27 @@ or
 ```python
 numpy.random.uniform(-2, 2, 10)
 ```
+
+# Convolutions
+
+Spatial dimensions of feature maps after each layer:
+
+$p$ is the padding (applied on both sides),
+
+$U$ is the size of the kernel and 
+
+$S$ is the stride.
+
+
+Convolutional Layer:
+
+$$
+  \left\lfloor\frac{\text{Input} + 2 \cdot p - U}{S}\right\rfloor + 1 = \frac{28 - 7}{1} + 1 = 22 \times 22
+$$
+
+Max Pooling Layer
+
+$$
+\left\lfloor\frac{\text{Input}-U}{S} \right\rfloor + 1
+= \frac{22-2}{2} + 1 = 11 \times 11
+$$
