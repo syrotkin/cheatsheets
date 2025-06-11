@@ -179,3 +179,29 @@ torch.nn.functional.softmax(input, dim=1)
 
 .numpy(force=True) # numpy ndarray
 ```
+
+# Numpy
+
+`concatentate` takes a tuple of arrays
+
+```python
+numpy.concatenate(([1], h_))
+```
+
+## Random numbers:
+
+Using same trick as in pytorch, with r1, r2 (or low, high)
+
+10 numbers from -2 to 2:
+
+```python
+(-2 - 2) * numpy.random.rand(10) + 2
+>>
+array([ 1.09914128,  1.24976012,  1.08751941, -1.25322792,  0.16843026,
+       -0.59217607, -1.7445086 , -1.26549274,  1.76720579, -1.8669122 ])
+```
+
+or 
+```python
+numpy.random.uniform(-2, 2, 10)
+```
