@@ -11,6 +11,39 @@ $$\text{TNR} = \frac{\text{True Negatives}}{\text{True Negatives+False Positives
 
 $$\text{Accuracy} = \frac{\text{True Positives + True Negatives}}{\text{True Positives+ False Negatives + True Negatives+False Positives}} = \frac{\text{TP + TN}}{\text{P + N}}$$
 
+# Loss functions and gradients
+
+## MSE
+Given a logistic activation function (sigmoid)
+
+
+$$\frac{\partial \mathcal J}{\partial w_{k,d}^{(1)}}=\frac{2}{N}\sum_{n=1}^{N}(y^{[n]}-t^{[n]})w_k^{(2)}h_k^{[n]}(1-h_k^{[n]})x_d^{[n]}$$
+
+
+$$\frac{\partial \mathcal J}{\partial w_{k}^{(2)}}=\frac{2}{N}\sum_{n=1}^{N}(y^{[n]}-t^{[n]})h_k^{[n]}$$
+
+## BCE and CCE
+without `2/N` at the beginning
+
+## w.r.t. logits:
+
+CCE with Softmax
+
+Same as BCE with logistic activation function (sigmoid)
+
+$$\begin{aligned}
+\mathcal J^{\text{CCE}}
+&= -\frac{1}{N} \sum_{n=1}^{N} \log y_{\tau^{[n]}}^{[n]}
+&= -\frac{1}{N} \sum_{n=1}^{N} \log \frac{e^{z_{\tau^{[n]}}^{[n]} }}{\sum_{o=1}^{O} e^{z_o^{[n]} }}  
+\end{aligned}$$
+
+$$\begin{aligned}
+\frac{\partial\mathcal J^{[n]}}{\partial\mathcal z_o^{[n]}}
+&= -\frac{\partial \Bigl[ \sum_{o'=1}^{O} t_{o'}^{[n]}({z_{o'}^{[n]} }) - \log \sum_{o'=1}^{O} e^{{z_{o'}^{[n]} }}\Bigr]}{\partial z_o^{[n]}}\\[6ex]
+
+= y_o^{[n]} -t_o^{[n]} 
+\end{aligned}$$
+
 # Pytorch
 
 ## dims
