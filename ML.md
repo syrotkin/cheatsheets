@@ -39,7 +39,7 @@ $$
 
 $$
 \frac{\partial\mathcal J^{[n]}}{\partial\mathcal z_o^{[n]}}
-= -\frac{\partial \Bigl[ \sum_{o'=1}^{O} t_{o'}^{[n]}({z_{o'}^{[n]} }) - \log \sum_{o'=1}^{O} e^{{z_{o'}^{[n]} }}\Bigr]}{\partial z_o^{[n]}}\\[6ex]
+= -\frac{\partial \Bigl[ \sum_{o'=1}^{O} t_{o'}^{[n]}({z_{o'}^{[n]} }) - \log \sum_{o'=1}^{O} e^{{z_{o'}^{[n]} }}\Bigr]}{\partial z_o^{[n]}}
 
 = y_o^{[n]} -t_o^{[n]} 
 $$
