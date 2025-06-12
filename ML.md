@@ -31,18 +31,18 @@ CCE with Softmax
 
 Same as BCE with logistic activation function (sigmoid)
 
-$$\begin{aligned}
+$$
 \mathcal J^{\text{CCE}}
-&= -\frac{1}{N} \sum_{n=1}^{N} \log y_{\tau^{[n]}}^{[n]}
-&= -\frac{1}{N} \sum_{n=1}^{N} \log \frac{e^{z_{\tau^{[n]}}^{[n]} }}{\sum_{o=1}^{O} e^{z_o^{[n]} }}  
-\end{aligned}$$
+= -\frac{1}{N} \sum_{n=1}^{N} \log y_{\tau^{[n]}}^{[n]}
+= -\frac{1}{N} \sum_{n=1}^{N} \log \frac{e^{z_{\tau^{[n]}}^{[n]} }}{\sum_{o=1}^{O} e^{z_o^{[n]} }}  
+$$
 
-$$\begin{aligned}
+$$
 \frac{\partial\mathcal J^{[n]}}{\partial\mathcal z_o^{[n]}}
-&= -\frac{\partial \Bigl[ \sum_{o'=1}^{O} t_{o'}^{[n]}({z_{o'}^{[n]} }) - \log \sum_{o'=1}^{O} e^{{z_{o'}^{[n]} }}\Bigr]}{\partial z_o^{[n]}}\\[6ex]
+= -\frac{\partial \Bigl[ \sum_{o'=1}^{O} t_{o'}^{[n]}({z_{o'}^{[n]} }) - \log \sum_{o'=1}^{O} e^{{z_{o'}^{[n]} }}\Bigr]}{\partial z_o^{[n]}}\\[6ex]
 
 = y_o^{[n]} -t_o^{[n]} 
-\end{aligned}$$
+$$
 
 # Pytorch
 
