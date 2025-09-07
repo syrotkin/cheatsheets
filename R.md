@@ -5,6 +5,12 @@ minwageNJ <- subset(minwage, subset = (location != "PA"))
 head(minwageNJ)
 ```
 
+You can also select columns:
+```R
+subset(airquality, Temp > 80, select = c(Ozone, Temp))
+```
+
+
 ### Another way to subset:
 
 ```R
