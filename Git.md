@@ -228,7 +228,7 @@ git commit --amend --author="John Doe <john@doe.org>"
 	deletegonebranches = !git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
 ```
 
-## Example of C:\Users\Oleksiy.Syrotkin.DEV-ZH-321\.gitconfig
+## Example of C:\Users\<username>.DEV-ZH-321\.gitconfig
 ```
 [safe]
 	directory = C:/dev
@@ -255,3 +255,10 @@ If you have updated your submodules and now want to point to the TIP of the subm
 `git submodule update --recursive --remote`
 
 https://stackoverflow.com/questions/1030169/easy-way-to-pull-latest-of-all-git-submodules
+
+
+# Show which local branches have commits to be pushed
+```bash
+git for-each-ref --format="%(refname:short) %(upstream:track) %(upstream:remotename)" refs/heads
+```
+Here: https://stackoverflow.com/a/20499690
