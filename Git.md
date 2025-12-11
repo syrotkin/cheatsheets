@@ -200,7 +200,9 @@ From: https://www.git-tower.com/learn/git/faq/change-author-name-email/
 git commit --amend --author="John Doe <john@doe.org>"
 ```
 
-## Example of file under `C:\Program Files\git\etc\gitconfig`
+## Example of file under `C:\Program Files\git\etc\gitconfig` (system)
+This is for all repositories of all users.
+
 ```
 [diff "astextplain"]
 	textconv = astextplain
@@ -228,9 +230,8 @@ git commit --amend --author="John Doe <john@doe.org>"
 	deletegonebranches = !git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
 ```
 
-## Example of `C:\Users\<username>\.gitconfig`
-
-This is the file that is changed when I run `git config --global`
+## Example of `C:\Users\<username>\.gitconfig` (global)
+This is the file that is changed when I run `git config --global`. This is for all repositories of the current user.
 
 ```
 [safe]
@@ -266,4 +267,5 @@ git for-each-ref --format="%(refname:short) %(upstream:track) %(upstream:remoten
 ```
 
 Here: https://stackoverflow.com/a/20499690
+
 
