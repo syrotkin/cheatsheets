@@ -229,6 +229,9 @@ git commit --amend --author="John Doe <john@doe.org>"
 ```
 
 ## Example of `C:\Users\<username>\.gitconfig`
+
+This is the file that is changed when I run `git config --global`
+
 ```
 [safe]
 	directory = C:/dev
@@ -263,3 +266,4 @@ git for-each-ref --format="%(refname:short) %(upstream:track) %(upstream:remoten
 ```
 
 Here: https://stackoverflow.com/a/20499690
+
