@@ -200,7 +200,7 @@ From: https://www.git-tower.com/learn/git/faq/change-author-name-email/
 git commit --amend --author="John Doe <john@doe.org>"
 ```
 
-## Example of file under C:\Program Files\git\etc\gitconfig
+## Example of file under `C:\Program Files\git\etc\gitconfig`
 ```
 [diff "astextplain"]
 	textconv = astextplain
@@ -228,7 +228,7 @@ git commit --amend --author="John Doe <john@doe.org>"
 	deletegonebranches = !git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
 ```
 
-## Example of C:\Users\<username>.DEV-ZH-321\.gitconfig
+## Example of `C:\Users\<username>\.gitconfig`
 ```
 [safe]
 	directory = C:/dev
@@ -261,4 +261,5 @@ https://stackoverflow.com/questions/1030169/easy-way-to-pull-latest-of-all-git-s
 ```bash
 git for-each-ref --format="%(refname:short) %(upstream:track) %(upstream:remotename)" refs/heads
 ```
+
 Here: https://stackoverflow.com/a/20499690
