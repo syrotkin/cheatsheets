@@ -2,10 +2,10 @@ $$ \text{P} = \text{TP + FN} $$
 
 $$ \text{N} = \text{TN + FP} $$
 
-$$\text{Precision} =  \frac{\text{True Positives}}{\text{True Positives+False Positives}}$$
+$$\text{Precision} = \text{PPV} (\text{positive predictive value})  =  \frac{\text{True Positives}}{\text{True Positives+False Positives}}$$
 
 
-$$\text{Recall} = \text{TPR} = \frac{\text{True Positives}}{\text{True Positives+False Negatives}} = \frac{\text{TP}}{\text{P}}$$
+$$\text{Recall} = \text{TPR} (\text{true positive rate}) = \frac{\text{True Positives}}{\text{True Positives+False Negatives}} = \frac{\text{TP}}{\text{P}}$$
 
 $$\text{TNR} = \frac{\text{True Negatives}}{\text{True Negatives+False Positives}} = \frac{\text{TN}}{\text{N}}$$
 
