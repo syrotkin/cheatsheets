@@ -1,11 +1,12 @@
 # Virtual Environment with uv
-`pip intall uv`
+`pip install uv`
+
 `uv venv`
 
 ### Powershell
 `.venv\Scripts\activate` to activate
 
-`uv pip install ...` to install
+`uv pip install ...` to install packages
 
 `deactivate` to deactivate
 
