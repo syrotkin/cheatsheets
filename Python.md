@@ -1,3 +1,15 @@
+# Virtual Environment with uv
+`pip intall uv`
+`uv venv`
+
+### Powershell
+`.venv\Scripts\activate` to activate
+
+`uv pip install ...` to install
+
+`deactivate` to deactivate
+
+
 # Introspection
 
 https://www.golinuxcloud.com/python-type-of-variable/
