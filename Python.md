@@ -11,6 +11,9 @@
 `deactivate` to deactivate
 
 
+# requirements.txt
+`uv pip install -r requirements.txt`
+
 # Introspection
 
 https://www.golinuxcloud.com/python-type-of-variable/
