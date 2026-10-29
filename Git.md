@@ -66,6 +66,15 @@ We are in a feature branch:
 
 `git merge master` -- merges `master` into the current branch. The current branch will be aware of all the changes in `master`.
 
+## Accept all "ours" (or "local")
+"Ours" or "local" is the branch that is checked out now (or the current branch). "theirs" or "remote" is the branch that is being merged into the current branch.
+e.g., accept all the compiled Python files:
+```powershell
+git restore --ours -- '*.pyc'
+git add -- '*.pyc'
+```
+
+
 ## Delete local branches that do not exist in remote anymore
 ```
 git fetch -p
